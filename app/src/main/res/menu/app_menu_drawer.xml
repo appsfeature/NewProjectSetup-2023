@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/menu_rate_us"
+            android:title="Login" />
+
+        <item
+            android:id="@+id/nav_change_class"
+            android:icon="@drawable/menu_rate_us"
+            android:title="Change Class" />
+
+        <item
+            android:id="@+id/nav_day_night"
+            android:title="Night Mode"
+            app:actionViewClass="androidx.appcompat.widget.SwitchCompat"
+            android:icon="@drawable/menu_rate_us" />
+
+        <item
+            android:id="@+id/nav_leader_board"
+            android:icon="@drawable/menu_rate_us"
+            android:title="LeaderBoard" />
+
+        <item
+            android:id="@+id/nav_downloaded_books"
+            android:icon="@drawable/menu_rate_us"
+            android:title="Downloaded Books" />
+
+        <item
+            android:id="@+id/nav_bookmark_pdf"
+            android:icon="@drawable/menu_rate_us"
+            android:title="Pdf Bookmark" />
+
+        <item
+            android:id="@+id/nav_bookmark_que"
+            android:icon="@drawable/menu_rate_us"
+            android:title="Que Bookmark" />
+
+        <item
+            android:id="@+id/nav_bookmark"
+            android:icon="@drawable/menu_rate_us"
+            android:title="Article Bookmarks" />
+
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_more_apps"
+                android:icon="@drawable/menu_rate_us"
+                android:title="More Apps" />
+
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/menu_rate_us"
+                android:title="App Share" />
+            <item
+                android:id="@+id/nav_rate_us"
+                android:icon="@drawable/menu_rate_us"
+                android:title="Rate Us" />
+            <item
+                android:id="@+id/privacy_policy"
+                android:icon="@drawable/menu_rate_us"
+                android:title="Privacy Policy" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TopCoaching</string>
+    <string name="ads_admob_app_id">ca-app-pub-6913072320040860~4730202561</string>
+
+    <integer name="url_min_app_version">1</integer>
+    <string name="url_public_short_host">https://fastresult.page.link</string>
+    <string name="url_public_domain_host">https://fastresult.in/</string>
+    <string name="url_public_domain_host_manifest">fastresult.page.link</string>
+</resources>

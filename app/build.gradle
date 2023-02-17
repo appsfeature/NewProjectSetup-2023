@@ -1,0 +1,73 @@
+plugins {
+    id 'com.android.application'
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.topcoaching'
+    compileSdk 33
+
+    defaultConfig {
+        flavorDimensions "default"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    productFlavors{
+        gkenglish {
+            applicationId "gk.currentaffairs.india"
+            versionCode 280
+            versionName "11.6.20"
+            manifestPlaceholders = [onesignal_app_id: "caa805b4-6ffc-46bc-99f4-723b3ddfe97f", onesignal_google_project_number: "REMOTE"]
+        }
+    }
+
+    signingConfigs {
+        gkenglish {
+            storeFile file("../keystore/GKEnglish/release.jks")
+            storePassword "dennis1@3"
+            keyAlias "Gk English"
+            keyPassword "dennis1@3"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            productFlavors.gkenglish.signingConfig signingConfigs.gkenglish
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+
+    implementation "androidx.appcompat:appcompat:$rootProject.ext.appcompat"
+    implementation "com.google.android.material:material:$rootProject.ext.material"
+    implementation "androidx.recyclerview:recyclerview:$rootProject.ext.recyclerview"
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.ext.retrofit_version"
+    implementation "androidx.room:room-runtime:$rootProject.ext.room_version"
+    annotationProcessor "androidx.room:room-compiler:$rootProject.ext.room_version"
+    implementation "com.squareup.picasso:picasso:$rootProject.ext.picasso_version"
+    implementation 'com.google.firebase:firebase-dynamic-links:21.1.0'
+    implementation 'com.onesignal:OneSignal:4.7.2'
+
+    implementation "org.bitbucket.android-dennislabs:helper:$rootProject.ext.helper_version"
+    implementation "org.bitbucket.amitresearchdev:adssdkmaster:$rootProject.ext.adssdkmaster_version"
+    implementation "org.bitbucket.amitresearchdev:config:$rootProject.ext.config_version"
+}

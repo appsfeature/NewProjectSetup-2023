@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name=".AppApplication"
+        android:theme="@style/ActivityTheme.ActionBar"
+        tools:targetApi="31">
+        <activity android:name=".activity.SplashActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:host="@string/url_public_domain_host_manifest"
+                    android:scheme="https"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:theme="@style/ActivityTheme.NoActionBar"
+            android:exported="true">
+        </activity>
+        <activity android:name=".activity.NotificationActivity" />
+
+        <activity
+            android:name=".activity.ClassSelectionActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/ActivityTheme.NoActionBar" />
+
+        <activity
+            android:name=".activity.ListActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/ActivityTheme.ActionBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/ads_admob_app_id" />
+
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
+
+        <meta-data android:name="com.onesignal.NotificationServiceExtension"
+            android:value="com.topcoaching.onesignal.ResultNotificationReceivedHandler" />
+
+        <meta-data
+            android:name = "com.apikey.onesignal"
+            android:value = "${onesignal_app_id}"/>
+
+    </application>
+
+</manifest>

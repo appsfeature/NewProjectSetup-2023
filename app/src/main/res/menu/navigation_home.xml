@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/selector_menu_bottom_bar_home"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/menu_library"
+        android:icon="@drawable/selector_menu_bottom_bar_home"
+        android:title="Library" />
+
+    <item
+        android:id="@+id/menu_saved"
+        android:icon="@drawable/selector_menu_bottom_bar_home"
+        android:title="Saved" />
+
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/selector_menu_bottom_bar_home"
+        android:title="Profile"
+        android:visible="true"/>
+
+</menu>

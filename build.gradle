@@ -1,0 +1,30 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    dependencies {
+        classpath 'com.google.gms:google-services:4.3.15'
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.13.4'
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.4.1' apply false
+    id 'com.android.library' version '7.4.1' apply false
+}
+
+ext {
+    appcompat = '1.6.1'
+    material = '1.8.0'
+    recyclerview = '1.2.1'
+    swiperefreshlayout = '1.0.0'
+
+    retrofit_version = '2.9.0'
+    retrofit_okhttp_version = '4.8.1'
+
+    room_version = "2.5.0"
+    picasso_version = '2.71828'
+
+    helper_version = '2.0-alpha04'
+    adssdkmaster_version = '1.8-alpha02'
+    config_version = '3.5-alpha06'
+}
